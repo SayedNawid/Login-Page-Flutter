@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:login_page/components/MyTextField.dart';
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+   LoginPage({super.key});
+
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,20 +26,18 @@ class LoginPage extends StatelessWidget {
               Text("Welcome back you\`ve been missed!" , style: TextStyle(color: Colors.grey[700] , fontSize: 18),),
               SizedBox(height: 25,),
               //username textfield 
-              TextField(
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey.shade400)
-                  ),
-                  fillColor: Colors.grey.shade200,
-                  filled: true
-                ),
-              )
-          
+              Mytextfield(
+                controller: usernameController,
+                hintText: "UserName",
+                obscureText: false,
+              ),
+              SizedBox(height: 25,),
               //password textfield 
+              Mytextfield(
+                controller: passwordController,
+                hintText: "Password",
+                obscureText: true,
+              ),
           
               //forget password
           
