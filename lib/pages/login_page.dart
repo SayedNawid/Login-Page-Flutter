@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/components/MyTextField.dart';
+import 'package:login_page/components/MyButton.dart';
 class LoginPage extends StatelessWidget {
    LoginPage({super.key});
 
@@ -38,10 +39,20 @@ class LoginPage extends StatelessWidget {
                 hintText: "Password",
                 obscureText: true,
               ),
-          
+              SizedBox(height: 10,),
               //forget password
-          
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text("Forget Password?" ,style: TextStyle(color: Colors.grey[600]),),
+                  ],
+                ),
+              ),
+              SizedBox(height: 10,),
               //sign in button
+              Mybutton(),
           
               //or continue with 
           
