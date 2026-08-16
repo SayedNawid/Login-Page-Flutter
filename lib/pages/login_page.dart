@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/components/MyTextField.dart';
 import 'package:login_page/components/MyButton.dart';
+import 'package:login_page/components/SquareTile.dart';
 class LoginPage extends StatelessWidget {
    LoginPage({super.key});
 
@@ -81,10 +82,17 @@ class LoginPage extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
-          
+              ),
+              SizedBox(height: 50.0,),
               //google + apple sign in buttons
-          
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Squaretile(imagePath: "images/google.png"),
+                  SizedBox(width: 10,),
+                  Squaretile(imagePath: "images/apple-logo.png"),
+                ],
+              )
               //not a members? register now 
             ],
           ),
